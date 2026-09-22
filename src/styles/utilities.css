@@ -1,0 +1,15 @@
+@utility shadow {
+  box-shadow: 0px 10px 45px rgba(0, 0, 0, 0.05);
+}
+
+@utility shadow-lg {
+  box-shadow: 0px 15px 34px rgba(0, 0, 0, 0.1);
+}
+
+@utility bg-gradient-to-tl {
+  background-image: linear-gradient(184.78deg, #0c4a6e 7.64%, #7dd3fc 120.07%);
+}
+
+@utility bg-gradient {
+  background-image: linear-gradient(184.78deg, #1a3c07ff 7.64%, #5a9b62ff 120.07%);
+}

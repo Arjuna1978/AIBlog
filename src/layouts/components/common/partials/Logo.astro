@@ -1,0 +1,34 @@
+---
+import { Image } from "astro:assets";
+import mylogo from "@/image/common/logo.svg";
+
+//TODO: I think that we should get this content from the config file.
+const logoSpecs = {
+  logo: "@/content/images/common/logo.svg",
+  logo_width: 55,
+  logo_height: 11,
+  logo_text: 'SKFL Technologies',
+  title: "SKFL Technologies Pty Ltd",
+};
+---
+
+<a href="/" class="navbar-brand block">
+  {
+    logoSpecs.logo ? (
+      <Image
+        width={logoSpecs.logo_width * 2}
+        height={logoSpecs.logo_height * 2}
+        src={mylogo}
+        alt={logoSpecs.title}
+        style={{
+          height: logoSpecs.logo_height,
+          width: logoSpecs.logo_width,
+        }}
+      />
+    ) : logoSpecs.logo_text ? (
+      logoSpecs.logo_text
+    ) : (
+      logoSpecs.title
+    )
+  }
+</a>

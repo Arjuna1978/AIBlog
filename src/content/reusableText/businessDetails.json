@@ -1,0 +1,47 @@
+{
+    "businessDetails": {
+    "email": "info@skfl.tech",
+    "location": "Sydney, NSW, 2000",
+    "phone": "+6142 090 6823",
+    "copyright": "Copyright © 2025 SKFL Technologies PTY LTD",
+     "contact_form_action": "#",
+    "acn":"668 341 820"
+  },
+
+    "valueProp":{
+      "small":"Small blurb covering value prop",
+      "medium":"medium blurb covering value prop",
+      "large":"large blurb covering value prop"
+    },
+
+"socials":  {
+  "facebook": "https://facebook.com/",
+  "twitter": "https://twitter.com/",
+  "instagram": "",
+  "youtube": "",
+  "linkedin": "https://linkedin.com/",
+  "github": "",
+  "gitlab": "",
+  "medium": "",
+  "codepen": "",
+  "bitbucket": "",
+  "dribbble": "",
+  "behance": "",
+  "pinterest": "",
+  "soundcloud": "",
+  "tumblr": "",
+  "reddit": "",
+  "vk": "",
+  "whatsapp": "",
+  "snapchat": "",
+  "vimeo": "",
+  "tiktok": "",
+  "foursquare": "",
+  "rss": "",
+  "email": "",
+  "phone": "",
+  "address": "",
+  "skype": "https://skype.com/",
+  "app": "https://app.skfl.tech/"
+}
+}

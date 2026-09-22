@@ -1,0 +1,30 @@
+---
+import { Image } from "astro:assets";
+import smoke1 from "@/image/decorators/smoke.svg";
+import smoke2 from "@/image/decorators/Smoke1.svg";
+import smoke3 from "@/image/decorators/Smoke2.svg";
+
+
+---
+
+<Image
+  class="floating-bubble-1 absolute right-0 top-0"
+  src=  {smoke1}
+  alt=""
+  height={210}
+  width={200}
+/>
+<Image
+  class="floating-bubble-2 absolute left-0 top-[387px] -z-[1]"
+  src=  {smoke2}
+  alt=""
+    height={420}
+  width={400}
+/>
+<Image
+  class="floating-bubble-3 absolute right-0 top-[605px] -z-[1]"
+  src={smoke3}
+  alt=""
+  height={210}
+  width={200}
+/>

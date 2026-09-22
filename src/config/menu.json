@@ -1,0 +1,43 @@
+{
+  "main": [
+    {
+      "name": "Home",
+      "url": "/"
+    },
+    {
+      "name": "About",
+      "url": "/about"
+    },
+    {
+      "name": "Blog",
+      "url": "/blog"
+    }
+  ],
+  "site": {
+    "title": "crAIzy",
+    "base_url": "https://arjuna1978.github.io/Portfolio/",
+    "base_path": "/",
+    "trailing_slash": false,
+    "favicon": "/images/favicon.png",
+    "logo": "/images/logo.png",
+    "logo_width": "147",
+    "logo_height": "31",
+    "logo_text": "SKL Scout"
+  },
+
+  "footer": [
+    {
+      "name": "About",
+      "url": "/about"
+    } ,
+    {
+      "name": "About",
+      "url": "/about"
+    },
+    {
+      "name": "Blog",
+      "url": "/blog"
+    }
+
+  ]
+}

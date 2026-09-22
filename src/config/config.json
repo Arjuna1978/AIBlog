@@ -1,0 +1,26 @@
+{
+  "site": {
+    "title": "SKFL Technologies",
+    "base_url": "https://www.skfl.tech",
+    "base_path": "/",
+    "trailing_slash": false,
+    "favicon": "../../src/images/common/favicon.svg"
+  },
+
+  "settings": {
+    "pagination": 6,
+    "summary_length": 100
+  },
+
+  "google_tag_manager": {
+    "enable": false,
+    "gtm_id": "GTM-XXXXXX"
+  },
+
+
+  "metadata": {
+    "meta_author": "SKFL",
+    "meta_image": "/images/og-image.png",
+    "meta_description": "SKFL Technologies PTY LTD"
+  }
+}

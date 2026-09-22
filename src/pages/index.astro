@@ -1,0 +1,42 @@
+---
+/**
+@file index.astro
+@component
+
+Index.astro serves as the main layout for the site's homepage.
+
+This componenet is an extention of base.astro.
+base.astro handles all the metadata and global stuff like managing the header and footer.
+
+It is responsible for fetching structured data from the 'homepage' content
+collection. This data is stored in ./src/content/homepage/-index.md
+
+The homepage data is passed specific components:
+banner, features, service, testimonial.
+
+Page components are in ./src/layouts/components/home.
+
+This file does not accept any external props and handles all data loading internally.
+@returns {HTML} The complete, rendered homepage HTML
+*/
+
+import Base from "@/layouts/components/common/Base.astro";
+import Banner from "@/layouts/components/Banner.astro";
+import KeyFeatures from "@/layouts/components/home/CardTable.astro";
+import Cta from "@/layouts/components/common/Cta.astro";
+import type { CollectionEntry } from "astro:content";
+import { getEntry } from "astro:content";
+
+const homepage = (await getEntry(
+  "homepage",
+  "-index"
+)) as CollectionEntry<"homepage">;
+const {banner, key_features,cta } = homepage.data;
+
+---
+
+<Base>
+  <Banner banner={banner} />
+  <KeyFeatures key_features={key_features} />
+  <Cta cta={cta} />
+</Base>

@@ -1,0 +1,39 @@
+---
+/**
+@file Cta.astro
+@component
+
+Call to action component made up of:
+(1) A bold statement. To draw the user in.
+(2) A button which is the action
+(3) A smaller font context parragraph to provide more information.
+
+Coulour is controled by tailwinds because of the gradient at src/styles/untlities.css
+@returns {HTML} The complete, rendered homepage HTML
+*/
+
+const {cta} = Astro.props;
+
+---
+
+<section class="px-5 py-20 xl:py-[120px]">
+  <div class="container">
+    <div
+      class="bg-gradient row justify-center rounded-b-[80px] rounded-t-[20px] px-[30px] pb-[75px] pt-16"
+    >
+      <div class="lg:col-11">
+        <div class="row">
+          <div class="lg:col-7">
+            <h2 class="h1 text-white">{cta.title}</h2>
+            <a class="btn btn-white mt-8" href={cta.buttonLink}>{cta.buttonLabel}</a>
+          </div>
+          <div class="mt-8 lg:col-5 lg:mt-0">
+            <p class="text-white">
+              {cta.description}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
