@@ -6,26 +6,26 @@
     },
     {
       "name": "About",
-      "url": "/about"
+      "url": "/AIBlog/about"
     },
     {
       "name": "Blog",
-      "url": "/blog"
+      "url": "/AIBlog/blog"
     }
   ],
 
   "footer": [
     {
       "name": "About",
-      "url": "/about"
+      "url": "/AIBlog/about"
     } ,
     {
       "name": "About",
-      "url": "/about"
+      "url": "/AIBlog/about"
     },
     {
       "name": "Blog",
-      "url": "/blog"
+      "url": "/AIBlog/blog"
     },
     {
       "name": "My Portfolio",
