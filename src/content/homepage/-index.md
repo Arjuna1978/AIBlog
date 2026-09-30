@@ -10,7 +10,8 @@ key_features:
   description: .
   feature_list:
     - icon: "book" #icon package react-feather-icon
-      title: "./categories/Theory"
+      title: Theory
+      link: "./categories/Theory"
       content: Articles covering AI theory.
     - icon: "coffee" #icon package react-feather-icon
       title: How to?
