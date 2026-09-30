@@ -11,16 +11,16 @@ key_features:
   feature_list:
     - icon: "book" #icon package react-feather-icon
       title: Theory
-      link: "./categories/Theory"
+      link: "./AIBlog/categories/theory"
       content: Articles covering AI theory.
     - icon: "coffee" #icon package react-feather-icon
       title: How to?
       content: Recipies for AI projects that I have done.
-      link: "./categories/how-to"
+      link: "./AIBlog/categories/how-to"
     - icon: "link" #icon package  
       title: Thoughts
       content: My thoughts and preditctions on the AI industry.
-      link: "./categories/how-to"
+      link: "./AIBlog/categories/thoughts"
 
 #cta
 cta:

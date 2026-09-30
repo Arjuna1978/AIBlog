@@ -3,6 +3,7 @@
     "title": "AI Blog",
     "base_url": "https://Arjuna1978.github.io",
     "base_path": "/AIBlog/",
+    "root": "/AIBlog",
     "trailing_slash": false,
     "favicon": "../../src/images/common/favicon.svg"
   },

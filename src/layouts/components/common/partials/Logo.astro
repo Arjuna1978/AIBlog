@@ -1,18 +1,19 @@
 ---
 import { Image } from "astro:assets";
 import mylogo from "@/image/common/logo.svg";
+import config from "@/config/config.json";
 
 //TODO: I think that we should get this content from the config file.
 const logoSpecs = {
   logo: "@/content/images/common/logo.svg",
   logo_width: 55,
   logo_height: 11,
-  logo_text: 'SKFL Technologies',
-  title: "SKFL Technologies Pty Ltd",
+  logo_text: config.site.title,
+  title: config.metadata.meta_description,
 };
 ---
 
-<a href="/" class="navbar-brand block">
+<a href={config.site.root} class="navbar-brand block">
   {
     logoSpecs.logo ? (
       <Image

@@ -1,8 +1,11 @@
 ---
 import { humanize, markdownify, slugify } from "@/lib/utils/textConverter";
-import HouseIcon from "@/image/icons/house.svg"
+import HouseIcon from "@/image/icons/house.svg";
+import config from "@/config/config.json";
 const { page_data } = Astro.props || {};
 const { title, index_title, page_title, slug, content } = page_data || {};
+
+const rootURL = config.site.root;
 ---
 
 <div class="text-center">
@@ -10,7 +13,7 @@ const { title, index_title, page_title, slug, content } = page_data || {};
     class="breadcrumb inline-flex h-8 items-center justify-center space-x-2 rounded-3xl bg-light px-4 py-2"
   >
     <li class="leading-none text-text-dark">
-      <a href="/" class="inline-flex items-center text-primary">
+      <a href={rootURL} class="inline-flex items-center text-primary">
         <HouseIcon class="mr-1.5" width={15} height={15} fill="black" />
 
         <span class="text-sm leading-none">Home</span>
@@ -21,7 +24,7 @@ const { title, index_title, page_title, slug, content } = page_data || {};
         index_title ? (
           <span class="text-sm leading-none">
             /{" "}
-            <a href={`/${slugify(index_title)}`} class="text-primary">
+            <a href={`rootURL/${slugify(index_title)}`} class="text-primary">
               {index_title}
             </a>{" "}
             / {page_title ? page_title : humanize(slug.replace("page /", ""))}
