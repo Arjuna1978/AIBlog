@@ -13,8 +13,8 @@ import mermaid from "astro-mermaid";
 
 // https://astro.build/config
 export default defineConfig({
-  site: config.site.base_url ? config.site.base_url : config.site,
-  base: config.site.base_path ? config.site.base_path : "/",
+  site: config.site.base_url || 'https://Arjuna1978.github.io',
+  base: config.site.base_path || '/AIBlog/',
   trailingSlash: config.site.trailing_slash ? "always" : "never",
   vite: { plugins: [tailwindcss()] },
   compressHTML: import.meta.env.PROD,
