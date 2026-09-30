@@ -1,7 +1,7 @@
 ---
-title: "SKFL Library"
-page_title: Our knowede for our community
-meta_title: This is a place we used to share your knowledge with our community
+title: "The crAIzy blog"
+page_title: Blog articles
+meta_title: Please read and share these with anyone who may be interested
 description: ""
 image: ""
 ---

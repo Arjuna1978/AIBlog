@@ -1,7 +1,7 @@
 {
   "site": {
-    "title": "SKFL Technologies",
-    "base_url": "https://www.skfl.tech",
+    "title": "crAIzy",
+    "base_url": "https://arjuna1978.github.io/Portfolio/",
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "../../src/images/common/favicon.svg"
@@ -19,8 +19,8 @@
 
 
   "metadata": {
-    "meta_author": "SKFL",
+    "meta_author": "Arjuna Vijayanayagam",
     "meta_image": "/images/og-image.png",
-    "meta_description": "SKFL Technologies PTY LTD"
+    "meta_description": "Vijayanayagam Investment Company PTY LTD"
   }
 }

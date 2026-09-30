@@ -18,6 +18,26 @@ Pharetra odio amet pellentesque. Egestas nisi adipiscing sed in lectus. Vitae ul
   so I as quickly To get.
 </Blockquote>
 
+# Feature Update <Badge client:load type="info">New</Badge>
+
+Here is a paragraph with an inline badge: <Badge client:load type="success">v2.0 Released</Badge>
+
+- Feature A <Badge client:load type="warning">Beta</Badge>
+- Feature B <Badge client:load type="danger">Deprecated</Badge>
+
+
+<ul>
+    <li>Oranges</li>
+    <li>Apples</li>
+</ul>
+
+```
+plugins: [
+  'gatsby-plugin-mdx',
+]
+```
+
+<img src="/src/images/common/favicon.svg" alt="Description" />
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec et ipsum ullamcorper venenatis fringilla. Pretium, purus eu nec vulputate vel habitant egestas. Congue ornare at ipsum, viverra. Vitae magna faucibus eros, lectus sociis. Etiam nunc amet id dignissim. Feugiat id tempor vel sit in ornare turpis posuere. Eu quisque integer non rhoncus elementum vel. Quis nec viverra lectus augue nec praesent volutpat tortor. Ipsum eget sed tempus luctus nisl. Ut etiam molestie mattis at faucibus mi at pellentesque. Pellentesque morbi nunc, curabitur arcu euismod suscipit. Duis mi sapien, nisl, pulvinar donec non dictum
 
 Laoreet mauris odio ut nec. Nisl, sed adipiscing dignissim arcu placerat ornare pharetra nec in. Ultrices in nisl potenti vitae tempus. Auctor consectetur luctus eu in amet sagittis. Dis urna, vel hendrerit convallis cursus id.

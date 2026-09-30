@@ -8,6 +8,7 @@ import favicons from "astro-favicons";
 import remarkCollapse from "remark-collapse";
 import remarkToc from "remark-toc";
 import config from "./src/config/config.json";
+import mermaid from "astro-mermaid";
 
 
 // https://astro.build/config
@@ -18,6 +19,10 @@ export default defineConfig({
   vite: { plugins: [tailwindcss()] },
   compressHTML: import.meta.env.PROD,
   integrations: [
+    mermaid({
+      theme: 'default', // Options: 'default', 'dark', 'forest', 'neutral'
+      autoTheme: true   // Toggles dark/light based on your site data-theme attribute
+    }),
     react(),
     sitemap(),
     AutoImport({
