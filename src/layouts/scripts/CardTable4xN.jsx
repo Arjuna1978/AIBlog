@@ -9,7 +9,9 @@ A flexible card table component. In our demo I use it for our feature list
 
 import { humanize } from "@/lib/utils/textConverter";
 import * as Icon from "react-feather";
+import config from "@/config/config.json"
 
+const basePath = config.site.base_path
 //Code that stepst through the list of SKFL features to be displayed on the homepage
 const CardTable4xN = ({ feature_list }) => {
   return (
@@ -19,7 +21,7 @@ const CardTable4xN = ({ feature_list }) => {
         return (
           <a
             key={i}
-            href={item.link}
+            href={basePath + item.link}
             class={`flex flex-col justify-between rounded-lg bg-white p-5 shadow-lg
               hover: }`}
           >
