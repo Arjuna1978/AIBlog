@@ -1,8 +1,8 @@
 {
   "site": {
-    "title": "SKFL Technologies",
-    "base_url": "https://www.skfl.tech",
-    "base_path": "/",
+    "title": "AI Blog",
+    "base_url": "https://Arjuna1978.github.io",
+    "base_path": "/AIBlog",
     "trailing_slash": false,
     "favicon": "../../src/images/common/favicon.svg"
   },
