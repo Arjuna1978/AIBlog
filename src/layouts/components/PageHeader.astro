@@ -1,8 +1,17 @@
 ---
 import { humanize, markdownify, slugify } from "@/lib/utils/textConverter";
-import HouseIcon from "@/image/icons/house.svg"
+import HouseIcon from "@/image/icons/house.svg";
+
 const { page_data } = Astro.props || {};
 const { title, index_title, page_title, slug, content } = page_data || {};
+
+// Prefix all links with the base URL (handles GitHub Pages / subpath deployment)
+const baseUrl = import.meta.env.BASE_URL.endsWith('/') 
+  ? import.meta.env.BASE_URL 
+  : `${import.meta.env.BASE_URL}/`;
+
+// Safely generate the index link
+const indexLink = index_title ? `${baseUrl}${slugify(index_title)}` : baseUrl;
 ---
 
 <div class="text-center">
@@ -10,9 +19,8 @@ const { title, index_title, page_title, slug, content } = page_data || {};
     class="breadcrumb inline-flex h-8 items-center justify-center space-x-2 rounded-3xl bg-light px-4 py-2"
   >
     <li class="leading-none text-text-dark">
-      <a href="/" class="inline-flex items-center text-primary">
+      <a href={baseUrl} class="inline-flex items-center text-primary">
         <HouseIcon class="mr-1.5" width={15} height={15} fill="black" />
-
         <span class="text-sm leading-none">Home</span>
       </a>
     </li>
@@ -21,10 +29,10 @@ const { title, index_title, page_title, slug, content } = page_data || {};
         index_title ? (
           <span class="text-sm leading-none">
             /{" "}
-            <a href={`/${slugify(index_title)}`} class="text-primary">
+            <a href={indexLink} class="text-primary">
               {index_title}
             </a>{" "}
-            / {page_title ? page_title : humanize(slug.replace("page /", ""))}
+            / {page_title ? page_title : (slug ? humanize(slug.replace("page /", "")) : title)}
           </span>
         ) : (
           <span class="text-sm leading-none">/ {title}</span>
@@ -35,13 +43,13 @@ const { title, index_title, page_title, slug, content } = page_data || {};
   <h1
     class="mb-5 mt-8"
     set:html={markdownify(
-      page_data?.page_title ? page_data?.page_title : page_data?.title
+      page_data?.page_title ? page_data?.page_title : page_data?.title || ""
     )}
   />
-  <p set:html={markdownify(content)} />
+  {content && <p set:html={markdownify(content)} />}
 
   {
-    page_data.buttons && (
+    page_data?.buttons && (
       <div class="mt-11 justify-center sm:flex">
         {page_data.buttons.map(
           (button: any) =>
@@ -50,7 +58,7 @@ const { title, index_title, page_title, slug, content } = page_data || {};
                 class={`btn m-3 block sm:inline-block ${
                   button?.outline ? "btn-outline-primary" : "btn-primary"
                 } `}
-                href={button?.link}
+                href={button?.link?.startsWith('/') ? `${baseUrl}${button.link.slice(1)}` : button?.link}
               >
                 {button?.label}
               </a>
