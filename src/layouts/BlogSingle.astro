@@ -1,14 +1,6 @@
 ---
-/**
-@file BlogSingle.astro
-@component
-
-This component renders the individual blog pages.
-
-*/
 import dateFormat from "@/lib/utils/dateFormat";
 import readingTime from "@/lib/utils/readingTime";
-
 import { humanize, slugify } from "@/lib/utils/textConverter";
 import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
@@ -25,37 +17,82 @@ type Props = {
 };
 
 const { post } = Astro.props;
+const { image, title } = post.data;
 const { Content } = await render(post);
-const imageSize = [460,225];
+const imageSize = [460, 225];
+
+// 1. Glob all images in /src/images/
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/**/*.{jpeg,jpg,png,gif,svg,webp}');
+
+// 2. Resolve image key
+let imageKey: string | undefined;
+
+if (image && typeof image === 'string' && image.trim() !== '') {
+  let cleaned = image.replace(/\/+/g, '/');
+
+  if (cleaned.includes('/src/images/')) {
+    imageKey = '/src/' + cleaned.split('/src/')[1];
+  } else if (cleaned.startsWith('../../images/')) {
+    imageKey = cleaned.replace('../../images/', '/src/images/');
+  } else if (cleaned.startsWith('/src/')) {
+    imageKey = cleaned;
+  } else if (cleaned.startsWith('src/')) {
+    imageKey = '/' + cleaned;
+  } else if (cleaned.startsWith('/')) {
+    imageKey = '/src' + cleaned;
+  } else {
+    imageKey = '/src/' + cleaned;
+  }
+}
+
+// 3. Await the import function to extract the ImageMetadata object
+let imageMetadata: ImageMetadata | undefined;
+
+if (imageKey && imageKey in images) {
+  const imageModule = await images[imageKey]();
+  imageMetadata = imageModule.default;
+}
 ---
 
 <section class="section blog-single">
   <div class="container">
     <div class="row justify-center">
-      <div class="lg:col-10">
-        <Image
-          class="rounded-xl aspect-video object-contain"
-          src={post.data.image!}
-          alt={post.data.title}
-          width= {imageSize[0]}
-          height={imageSize[1]}
-        />
-      </div>
+      {
+        imageMetadata && (
+          <div class="lg:col-10">
+            <Image
+              class="rounded-xl aspect-video object-contain"
+              src={imageMetadata}
+              alt={title}
+              width={imageSize[0]}
+              height={imageSize[1]}
+            />
+          </div>
+        )
+      }
       <div class="mt-10 max-w-[810px] lg:col-9">
         <h1 class="h2">
           {post.data.title}
         </h1>
         <div class="mb-5 mt-6 flex items-center space-x-2">
           <ul class="mb-4">
-            <li class="mr-4 inline-block">
-              <FaRegUserCircle className={"mr-2 -mt-1 inline-block"} />
-              {humanize(post.data.author!)}
-            </li>
+            {
+              post.data.author && (
+                <li class="mr-4 inline-block">
+                  <FaRegUserCircle className={"mr-2 -mt-1 inline-block"} />
+                  {humanize(post.data.author)}
+                </li>
+              )
+            }
 
-            <li class="mr-4 inline-block">
-              <FaRegCalendarAlt className={"mr-2 -mt-1 inline-block"} />
-              {dateFormat(post.data.date!)}
-            </li>
+            {
+              post.data.date && (
+                <li class="mr-4 inline-block">
+                  <FaRegCalendarAlt className={"mr-2 -mt-1 inline-block"} />
+                  {dateFormat(post.data.date)}
+                </li>
+              )
+            }
 
             {
               post.body && (
@@ -66,20 +103,24 @@ const imageSize = [460,225];
               )
             }
 
-            <li class="mr-4 inline-block">
-              <FaRegFolder className={"mr-2 -mt-1 inline-block"} />
-              {
-                post.data.categories.map((category, index) => (
-                  <a
-                    href={`/categories/${slugify(category)}`}
-                    class="hover:text-primary"
-                  >
-                    {humanize(category)}
-                    {index !== post.data.categories.length - 1 && ","}
-                  </a>
-                ))
-              }
-            </li>
+            {
+              post.data.categories && post.data.categories.length > 0 && (
+                <li class="mr-4 inline-block">
+                  <FaRegFolder className={"mr-2 -mt-1 inline-block"} />
+                  {
+                    post.data.categories.map((category, index) => (
+                      <a
+                        href={`/categories/${slugify(category)}`}
+                        class="hover:text-primary"
+                      >
+                        {humanize(category)}
+                        {index !== post.data.categories.length - 1 && ","}
+                      </a>
+                    ))
+                  }
+                </li>
+              )
+            }
           </ul>
         </div>
 

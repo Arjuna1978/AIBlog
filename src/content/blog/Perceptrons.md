@@ -1,7 +1,7 @@
 ---
 title: Perceptrons
 subtitle: What is a Perceptron
-image: "./images/post-1.png"
+image: "src/images/blogs/perceptrons/Perceptron_invent.png"
 author: Arjuna Vijayanayagam
 date: 2005-01-03T05:00:00Z
 categories: ["Theory","Foundations","History"]
