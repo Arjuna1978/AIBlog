@@ -5,6 +5,15 @@ import LiquidEther from  "../scripts/LiquidEther";
 const { banner } = Astro.props;
 const { title, image, content } = banner;
 
+// 1. Glob all images in src/images/
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/**/*.{jpeg,jpg,png,gif,svg,webp}');
+
+// 2. Resolve the matching image function (handles missing paths gracefully)
+const imagePath = image?.startsWith('/') ? image : `/${image}`;
+if (!images[imagePath]) {
+  throw new Error(`"${imagePath}" does not exist in glob: "/src/images/**/*.{jpeg,jpg,png,gif,svg,webp}"`);
+}
+
 ---
 
 <section class="section banner relative overflow-hidden">
@@ -22,7 +31,7 @@ const { title, image, content } = banner;
         <Image
           class="w-full object-contain"
           alt="banner"
-          src={image}
+          src={images[imagePath]()}
           width={603}
           height={396}
         />
