@@ -13,7 +13,14 @@ import { sortByDate } from "@/lib/utils/sortFunctions";
 import type { CollectionEntry } from "astro:content";
 import { getEntry } from "astro:content";
 
-const blogIndex = (await getEntry("blog", "-index")) as CollectionEntry<"blog">;
+const homepage = (await getEntry(
+  "homepage",
+  "-index",
+)) as CollectionEntry<"homepage">;
+const { cta } = homepage.data;
+const blogIndex = (await getEntry(
+  "blog", 
+  "-index")) as CollectionEntry<"blog">;
 const posts = await getSinglePage("blog");
 const categories = await getTaxonomy("blog", "categories");
 const sortedPosts = sortByDate(posts);
@@ -22,11 +29,7 @@ const recentPost = sortedPosts.filter((item) => !item.data.featured);
 const totalPages = Math.ceil(recentPost.length / config.settings.pagination);
 const currentPosts = recentPost.slice(0, config.settings.pagination);
 
-const homepage = (await getEntry(
-  "homepage",
-  "-index",
-)) as CollectionEntry<"homepage">;
-const { cta } = homepage.data;
+
 ---
 
 <Base

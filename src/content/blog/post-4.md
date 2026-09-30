@@ -1,17 +1,15 @@
 ---
-title: 6 Product Launch Email Examples You’ll Want to Steal
-subtitle: Mauris blandit aliquet elit, eget tincidunt nibh dolor sit amet,
+title: LLMs are not always the answer
+subtitle: Over reliance on LLMs as the "swiss army knife" AI is a problem.
 image: "/images/posts/post-9.png"
-author: Abdullah Al Shifat
-date: 2022-04-05T05:00:00Z
+author: Arjuna Vijayanayagam
+date: 2025-03-05T05:00:00Z
 categories: ["development"]
 featured: false
 draft: false
 ---
 
-Laoreet mauris odio ut nec. Nisl, sed adipiscing dignissim arcu placerat ornare pharetra nec in. Ultrices in nisl potenti vitae tempus. Auctor consectetur luctus eu in amet sagittis. Dis urna, vel hendrerit convallis Senectus feugiat faucibus commodo egestas leo vitae in morbi. Enim arcu dignissim mauris, eu, eget
-
-Pharetra odio amet pellentesque. Egestas nisi adipiscing sed in lectus. Vitae ultrices malesuada aliquet Faucibus consectetur tempus adipiscing vitae. Nec blandit tincidunt nibh nisi, quam volutpat. In lacus laoreet diam risus. Mauris, risus faucibus sagittis sagittis tincidunt id justo. Diam massa pretium consequat mauris viverra. Sagittis eu libero
+I have been in the AI industry before it became cool. More and more I am starting to realise that there is a trend in business to treat Large Language Models as a universal solution creates distinct engineering and operational risks 
 
 <Blockquote name="Alexender Smith">
   A wise girls her limit to touch.To Repellat neque praesentium .The me an idea,

@@ -1,26 +1,28 @@
 {
     "businessDetails": {
-    "email": "info@skfl.tech",
+    "email": "vijayanayagam@gmail.com",
     "location": "Sydney, NSW, 2000",
     "phone": "+6142 090 6823",
-    "copyright": "Copyright © 2025 SKFL Technologies PTY LTD",
-     "contact_form_action": "#",
-    "acn":"668 341 820"
+    "copyright": "Copyright © 2026 Vijayanayagam Investment Company  PTY LTD",
+    "contact_form_action": "#",
+    "acn":" 627 411 198"
   },
 
     "valueProp":{
-      "small":"Small blurb covering value prop",
+      "small":"This blog captures some of my AI knowledge",
       "medium":"medium blurb covering value prop",
       "large":"large blurb covering value prop"
     },
 
+"socials_note":{"1":"The lables for the below reference icons from: https://feathericons.com/"},
+
 "socials":  {
-  "facebook": "https://facebook.com/",
-  "twitter": "https://twitter.com/",
+  "facebook": "https://www.facebook.com/arj.una.503/",
+  "folder": "https://arjuna1978.github.io/Portfolio/",
   "instagram": "",
   "youtube": "",
-  "linkedin": "https://linkedin.com/",
-  "github": "",
+  "linkedin": "https://www.linkedin.com/in/arjunavijayanayagam/",
+  "git-branch": "https://github.com/Arjuna1978",
   "gitlab": "",
   "medium": "",
   "codepen": "",
@@ -41,7 +43,7 @@
   "email": "",
   "phone": "",
   "address": "",
-  "skype": "https://skype.com/",
-  "app": "https://app.skfl.tech/"
+  "skype": "",
+  "app": ""
 }
 }

@@ -1,0 +1,62 @@
+---
+import { humanize, markdownify, slugify } from "@/lib/utils/textConverter";
+import HouseIcon from "@/image/icons/house.svg"
+const { page_data } = Astro.props || {};
+const { title, index_title, page_title, slug, content } = page_data || {};
+---
+
+<div class="text-center">
+  <ul
+    class="breadcrumb inline-flex h-8 items-center justify-center space-x-2 rounded-3xl bg-light px-4 py-2"
+  >
+    <li class="leading-none text-text-dark">
+      <a href="/" class="inline-flex items-center text-primary">
+        <HouseIcon class="mr-1.5" width={15} height={15} fill="black" />
+
+        <span class="text-sm leading-none">Home</span>
+      </a>
+    </li>
+    <li class="leading-none text-text-dark">
+      {
+        index_title ? (
+          <span class="text-sm leading-none">
+            /{" "}
+            <a href={`/${slugify(index_title)}`} class="text-primary">
+              {index_title}
+            </a>{" "}
+            / {page_title ? page_title : humanize(slug.replace("page /", ""))}
+          </span>
+        ) : (
+          <span class="text-sm leading-none">/ {title}</span>
+        )
+      }
+    </li>
+  </ul>
+  <h1
+    class="mb-5 mt-8"
+    set:html={markdownify(
+      page_data?.page_title ? page_data?.page_title : page_data?.title
+    )}
+  />
+  <p set:html={markdownify(content)} />
+
+  {
+    page_data.buttons && (
+      <div class="mt-11 justify-center sm:flex">
+        {page_data.buttons.map(
+          (button: any) =>
+            button?.enable && (
+              <a
+                class={`btn m-3 block sm:inline-block ${
+                  button?.outline ? "btn-outline-primary" : "btn-primary"
+                } `}
+                href={button?.link}
+              >
+                {button?.label}
+              </a>
+            )
+        )}
+      </div>
+    )
+  }
+</div>

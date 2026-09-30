@@ -1,0 +1,134 @@
+---
+/**
+@file astro
+@component
+
+It is a button that twists
+
+Coulour is controled by tailwinds because of the gradient at src/styles/untlities.css
+@requires
+@returns {HTML} The complete, rendered homepage HTML
+*/
+interface Props {
+  label: string;
+  link?: string;
+}
+const { link = "/", label = "Button" } = Astro.props;
+
+// Determine if link is external
+const isExternal = link.startsWith("http://") || link.startsWith("https://") || link.startsWith("//");
+
+// Sanitize URL: prepend leading slash for relative paths if missing
+const href = isExternal 
+  ? link 
+  : link.startsWith("/") 
+    ? link 
+    : `/${link}`;
+
+// Set link target and security attributes dynamically
+const target = isExternal ? "_blank" : "_self";
+const rel = isExternal ? "noopener noreferrer" : undefined;
+
+---
+
+<section class="px-5 py-20 xl:py-[120px]">
+  <div class="my-8 flex justify-center">
+    <a href={href} 
+      target={target}
+      rel={rel}
+     class="twist-cta">
+      <div class="text-mask">
+        <span class="text primary">{label}</span>
+        <span class="text secondary">{label}</span>
+      </div>
+      <div class="icon-wrap">
+        <svg class="arrow" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.33325 7.00016H9.99992M5.99992 2.3335L10.6666 7.00016L5.99992 11.6668" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
+        </svg>
+        <svg class="arrow" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.33325 7.00016H9.99992M5.99992 2.3335L10.6666 7.00016L5.99992 11.6668" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
+        </svg>
+      </div>
+    </a>
+  </div>
+</section>
+
+
+
+<style>
+  .twist-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 0.875rem 1.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Text Mask clipping box */
+  .text-mask {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 1.5em; /* Ensures fixed height to match line-height */
+  }
+
+  .text {
+    display: block;
+    white-space: nowrap;
+    transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1), 
+                opacity 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+    transform-style: preserve-3d;
+  }
+
+  /* Primary text face state */
+  .text.primary {
+    opacity: 1;
+    transform: translate3d(0, 0%, 0) skew(0deg, 0deg);
+  }
+
+  /* Secondary text face hidden state */
+  .text.secondary {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: translate3d(0, 100%, 0) skew(0deg, 8deg);
+  }
+
+  /* Hover transitions for text twist */
+  .twist-cta:hover .text.primary {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0) skew(0deg, -8deg);
+  }
+
+  .twist-cta:hover .text.secondary {
+    opacity: 1;
+    transform: translate3d(0, 0%, 0) skew(0deg, 0deg);
+  }
+
+  /* Dual Arrow Conveyor System */
+  .icon-wrap {
+    display: flex;
+    overflow: hidden;
+    width: 14px;
+    gap: 0.5rem;
+  }
+
+  .arrow {
+    width: 13px;
+    height: 14px;
+    flex-shrink: 0;
+    transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* Hover transition for dual arrows */
+  .twist-cta:hover .arrow {
+    transform: translateX(calc(-100% - 0.5rem));
+  }
+</style>
