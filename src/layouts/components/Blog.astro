@@ -6,6 +6,8 @@ import { humanize, plainify, slugify } from "@/lib/utils/textConverter";
 import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
 const { summary_length } = config.settings;
+const rootURL = config.site.root;
+
 
 type Props = {
   posts: CollectionEntry<"blog">[];
@@ -71,13 +73,13 @@ const formattedPosts = await Promise.all(
           <div class="card-content">
             <div class="card-tags space-x-1">
               {item.data.categories?.map((category) => (
-                <a class="tag" href={`/categories/${slugify(category)}`}>
+                <a class="tag" href={rootURL+`/categories/${slugify(category)}`}>
                   {humanize(category)}
                 </a>
               ))}
             </div>
             <h3 class="h4 card-title">
-              <a href={`/blog/${item.id}`}>{item.data.title}</a>
+              <a href={rootURL+`/blog/${item.id}`}>{item.data.title}</a>
             </h3>
 
             {item.body && (
