@@ -1,6 +1,9 @@
 ---
 import { humanize, slugify } from "@/lib/utils/textConverter";
 import type { CollectionEntry } from "astro:content";
+import config from "@/config/config.json";
+const rootURL = config.site.root;
+
 
 type Props = {
   categories: CollectionEntry<"blog">["data"]["categories"];
@@ -16,7 +19,7 @@ const params = Astro.params;
         class={`filter-btn ${
           !params.category ? "filter-btn-active" : undefined
         } btn btn-sm`}
-        href="/categories">All Categories</a
+        href={rootURL+`/categories`}>All Categories</a
       >
     </li>
     {

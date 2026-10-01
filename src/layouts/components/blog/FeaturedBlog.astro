@@ -6,7 +6,7 @@ import { humanize, plainify, slugify } from "@/lib/utils/textConverter";
 import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
 const { summary_length } = config.settings;
-
+const rootURL = config.site.root;
 type Props = {
   posts: CollectionEntry<"blog">[];
 };
@@ -29,7 +29,7 @@ const { posts } = Astro.props;
           <div class="card-content">
             <div class="card-tags space-x-1">
               {post.data.categories.map((category) => (
-                <a class="tag" href={`/categories/${slugify(category)}`}>
+                <a class="tag" href={rootURL+`/categories/${slugify(category)}`}>
                   {humanize(category)}
                 </a>
               ))}
