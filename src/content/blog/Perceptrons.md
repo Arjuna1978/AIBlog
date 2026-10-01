@@ -10,15 +10,29 @@ draft: false
 ---
 Perceptrons - What is a Perceptron
 
+## TLDR
+
+The perceptron model is also known as a single-layer neural network. This neural net contains only two layers:
+- Input Layer
+- Output Layer
+
+In this type of neural network, there are no hidden layers. It takes an input and calculates the weighted input for each node. Afterward, it uses an activation function (mostly a sigmoid function) for classification purposes.
+
+## Applications
+- Classification.
+- Encode Database (Multilayer Perceptron).
+- Monitor Access Data (Multilayer Perceptron)
+
 ## History
-In 1957, Frank Rosenblatt was at the Cornell Aeronautical Laboratory. He simulated the perceptron on an IBM 704. He described them as : "src/images/blogs/perceptrons/perceptron_vs_nature.jpg"
+In 1957, Frank Rosenblatt was at the Cornell Aeronautical Laboratory. He simulated the perceptron on an IBM 704. He described them as : 
+
 <Blockquote name="Frank Rosenblatt">
 ...simplified networks, designed to permit the study of lawful relationships between the organization of a nerve net, the organization of its environment.
 </Blockquote>
 
 The high level diagram below shows the nature vs digital preceptron map:
 
-<img src="/src/images//blogs/perceptrons/perceptron_vs_nature.jpg" alt="Description" />
+![The perceptron maps an input array of x[n] to a output variable f(x). And the perceptron reflects a bilogical neuron, where x[n] represents the neuron's dendrites and f(x) represents the dendrites. ](../../images/blogs/perceptrons/perceptron_vs_nature.jpg)
 
 Rosenblatt's perceptron brought new life to an almost extinct area; this perceptron, in all its simplicity, appeared to be capable of "learning" certain things. On the other hand, it turned out that perceptrons were not able to learn certain other things, in spite of all the effort put into extending and refining the training process, and building bigger machines. Namely, most researchers in the field were looking for more general methods which should make the perceptron capable of handling a large class of problems. 
 
@@ -34,5 +48,5 @@ The perceptron maps an input array of x[n] to a output variable f(x). And the pe
 Newurons learn by modulating and amplifying inputs from their dedrites when considereing whether to fire or not. In the digital perceptron, this is modeled  by an array of weights W[n]. This is similar to how biological neurons in a networks activate or suppress the activation of their neighbours when completing a task.
 The result is calcualted by multiplying the inputs with their corresponding weights and summing them. The result is then normalised to give either a 1 or 0 deprending on the desired threshold (Activation).
 
-<img src="/src/images//blogs/perceptrons/Perceptron.png" alt="Description" />
+![The perceptron maps an input array of x[n] to a output variable f(x). And the perceptron reflects a bilogical neuron, where x[n] represents the neuron's dendrites and f(x) represents the dendrites. ](../../images//blogs/perceptrons/Perceptron.png)
 
