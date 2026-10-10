@@ -1,22 +1,24 @@
 ---
-title: Keep on Top of your To-Do List With Slick New Comment
-subtitle: Mauris blandit aliquet elit, eget tincidunt nibh dolor sit amet,
-image: "/src/images/decorators/shape-2.png"
-author: Abdullah Al Shifat
-date: 2022-04-05T05:00:00Z
-categories: ["rate optimization"]
-featured: false
+title: Example SKFL projects
+subtitle: Use these to learn how to SKFL your next system
+image: "/src/images/library/post1-Ollama-setup/Ollama.png"
+author: Alice Johnson
+date: 2025-01-03T05:00:00Z
+categories: ["Setup", "LLM"]
+featured: true
 draft: false
 ---
 
-Laoreet mauris odio ut nec. Nisl, sed adipiscing dignissim arcu placerat ornare pharetra nec in. Ultrices in nisl potenti vitae tempus. Auctor consectetur luctus eu in amet sagittis. Dis urna, vel hendrerit convallis Senectus feugiat faucibus commodo egestas leo vitae in morbi. Enim arcu dignissim mauris, eu, eget
+For a first graph, we will create a hello world application.
 
-Pharetra odio amet pellentesque. Egestas nisi adipiscing sed in lectus. Vitae ultrices malesuada aliquet Faucibus consectetur tempus adipiscing vitae. Nec blandit tincidunt nibh nisi, quam volutpat. In lacus laoreet diam risus. Mauris, risus faucibus sagittis sagittis tincidunt id justo. Diam massa pretium consequat mauris viverra. Sagittis eu libero
+1. Create three nodes. You can create nodes by dragging them in from the Document panel, or by using the 'n' shortcut key.
+2. Label the nodes 'i', 'HelloWorld', and 'Terminal'. You can label nodes by double-clicking on them.
+3. Connect the 'i' node to the 'HelloWorld' node, and the 'HelloWorld' node to the 'Terminal' node. You can connect nodes by using the 'New Edge' button on the Document panel, or hovering over the 'from' node, using the 'c' shortcut key, and clicking on the 'to' node.
 
-<Blockquote name="Alexender Smith">
-  A wise girls her limit to touch.To Repellat neque praesentium .The me an idea,
-  so I as quickly To get.
-</Blockquote>
+By now you should have something like this (feel free to drag your nodes around if they're not this neat!):
+
+
+
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec et ipsum ullamcorper venenatis fringilla. Pretium, purus eu nec vulputate vel habitant egestas. Congue ornare at ipsum, viverra. Vitae magna faucibus eros, lectus sociis. Etiam nunc amet id dignissim. Feugiat id tempor vel sit in ornare turpis posuere. Eu quisque integer non rhoncus elementum vel. Quis nec viverra lectus augue nec praesent volutpat tortor. Ipsum eget sed tempus luctus nisl. Ut etiam molestie mattis at faucibus mi at pellentesque. Pellentesque morbi nunc, curabitur arcu euismod suscipit. Duis mi sapien, nisl, pulvinar donec non dictum
 

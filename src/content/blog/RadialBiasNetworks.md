@@ -17,10 +17,11 @@ Radial basis function networks are generally used for function approximation pro
  The main difference between Radial Basis Networks and Feed-forward networks is that RBNs use a Radial Basis Function as an activation function. A logistic function (sigmoid function) gives an output between 0 and 1, to find whether the answer is yes or no. The problem with this is that if we have continuous values, then an RBN can’t be used. RBIs determines how far is our generated output from the target output. These can be very useful in case of continuous values. In summary, RBIs behave as FF networks using different activation functions.
 
 ## Applications
-Function Approximation.
-Time Series Prediction.
-Classification.
-System Control.
+
+- Function Approximation.
+- Time Series Prediction.
+- Classification.
+- System Control.
 
 ## History
 
