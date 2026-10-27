@@ -23,5 +23,8 @@
     "meta_author": "Arjuna Vijayanayagam",
     "meta_image": "/images/og-image.png",
     "meta_description": "Vijayanayagam Investment Company PTY LTD"
+  },
+  "defaut_images":{
+    "blogIcon":"../../src/images/common/favicon.svg"
   }
 }

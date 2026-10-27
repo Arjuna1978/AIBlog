@@ -9,6 +9,8 @@ import { getSinglePage } from "@/lib/contentParser.astro";
 import { sortByDate } from "@/lib/utils/sortFunctions";
 import type { CollectionEntry } from "astro:content";
 import { getEntry } from "astro:content";
+import Banner from "@/layouts/components/common/Banner.astro";
+
 
 export async function getStaticPaths() {
   const posts = await getSinglePage("blog");
@@ -45,7 +47,7 @@ const page_data = {
   title={blogIndex.data.title}
   meta_title={blogIndex.data.meta_title}
   description={blogIndex.data.description}
-  image={blogIndex.data.image}
+  image={blogIndex.data.icon}
 >
   <Shape />
   <section class="page-hero pt-16">

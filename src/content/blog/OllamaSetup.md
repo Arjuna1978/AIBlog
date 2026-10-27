@@ -1,12 +1,16 @@
 ---
 title: Ollama for SKFL
 subtitle: Prerequisite - How to set up Ollama for S
-image: "/images/posts/Ollama.png"
+image: "src/images/blogs/perceptrons/Perceptron_invent.png"
 author: Alice Johnson
 date: 2025-01-03T05:00:00Z
 categories: ["How to", "LLM"]
 featured: true
 draft: false
+image_list:
+    - image: "src/images/blogs/perceptrons/Perceptron_invent.png" #icon package react-feather-icon
+      caption: Theory
+      link: "/categories/theory"
 ---
 To use SKFL's code generation capability Ollama must run locally on your machine. This document comsistst of the following:
 

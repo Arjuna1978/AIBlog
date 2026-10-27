@@ -19,15 +19,15 @@ const homepage = (await getEntry(
 )) as CollectionEntry<"homepage">;
 const { cta } = homepage.data;
 const blogIndex = (await getEntry(
-  "blog", 
+  "blog",
   "-index")) as CollectionEntry<"blog">;
 const posts = await getSinglePage("blog");
 const categories = await getTaxonomy("blog", "categories");
 const sortedPosts = sortByDate(posts);
-const featuredPost = sortedPosts.filter((item) => item.data.featured);
-const recentPost = sortedPosts.filter((item) => !item.data.featured);
-const totalPages = Math.ceil(recentPost.length / config.settings.pagination);
-const currentPosts = recentPost.slice(0, config.settings.pagination);
+const featuredPosts = sortedPosts.filter((item) => item.data.featured);
+const recentPosts = sortedPosts.filter((item) => !item.data.featured);
+const totalPages = Math.ceil(recentPosts.length / config.settings.pagination);
+const currentPosts = recentPosts.slice(0, config.settings.pagination);
 
 
 ---
@@ -36,7 +36,7 @@ const currentPosts = recentPost.slice(0, config.settings.pagination);
   title={blogIndex.data.title}
   meta_title={blogIndex.data.meta_title}
   description={blogIndex.data.description}
-  image={blogIndex.data.image}
+  image={blogIndex.data.icon}
 >
   <section class="page-hero pt-16">
     <div class="container">
@@ -46,8 +46,7 @@ const currentPosts = recentPost.slice(0, config.settings.pagination);
   <section class="section">
     <div class="container">
       <BlogCategories categories={categories} />
-      <FeaturedBlog posts={featuredPost} />
-
+      <FeaturedBlog posts={featuredPosts} />
       <h2 class="h4 mb-4">Recent Posts</h2>
       <Blog posts={currentPosts} />
       <Pagination section={"blog"} currentPage={1} totalPages={totalPages} />

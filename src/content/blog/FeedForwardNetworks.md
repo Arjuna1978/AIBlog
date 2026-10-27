@@ -1,10 +1,11 @@
 ---
-title: FFNs
-subtitle: Feed Forward Networks (FFN)
-image: "src/images/blogs/FFN/FFN.png"
+title: Feed Forward Networks 
+subtitle: Theory of Feed Forward Networks (FFN)
+icon: "src/images/blogs/FFN/FFN.svg"
 author: Arjuna Vijayanayagam
 date: 2005-01-03T05:00:00Z
 categories: ["Theory","Foundations","History"]
+images: ["src/images/blogs/FFN/FFN.svg"]
 featured: false
 draft: false
 ---
@@ -16,7 +17,7 @@ A feed-forward neural network is an artificial neural network in which the nodes
 
  In a feed-forward neural network, every perceptron in one layer is connected with each node in the next layer. Therefore, all the nodes are fully connected. Something else to notice is that there is no visible or invisible connection between the nodes in the same layer. There are no back-loops in the feed-forward network. Hence, to minimize the error in prediction, we generally use the backpropagation algorithm to update the weight values.
 
- ![The perceptron maps an input array of x[n] to a output variable f(x). And the perceptron reflects a bilogical neuron, where x[n] represents the neuron's dendrites and f(x) represents the dendrites. ](../../images/blogs/FFN/FFN.png)
+ ![The perceptron maps an input array of x[n] to a output variable f(x). And the perceptron reflects a bilogical neuron, where x[n] represents the neuron's dendrites and f(x) represents the dendrites. ](../../images/blogs/FFN/FFN.svg)
 
 ## Applications
 

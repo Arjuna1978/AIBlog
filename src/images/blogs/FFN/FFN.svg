@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="123.01505mm"
+   height="46.803226mm"
+   viewBox="0 0 123.01505 46.803226"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="marker32"
+       refX="0"
+       refY="0"
+       orient="2"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path32" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker27"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path27" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="DartArrow"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         transform="scale(-0.5)"
+         id="path6" />
+    </marker>
+  </defs>
+  <g
+     id="g39"
+     transform="translate(-14.856599,-77.957739)">
+    <g
+       id="g38">
+      <g
+         id="g4"
+         transform="translate(0,26.803226)">
+        <circle
+           style="opacity:0.293525;fill:#646924;fill-opacity:1;fill-rule:evenodd;stroke-width:2.28356;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+           id="circle3"
+           cx="24.8566"
+           cy="87.957741"
+           r="10" />
+        <text
+           xml:space="preserve"
+           style="font-size:25.4px;line-height:0.7;font-family:Baskerville;-inkscape-font-specification:'Baskerville, Normal';letter-spacing:0.00264583px;word-spacing:0px;opacity:0.293525;fill:#646924;fill-opacity:1;fill-rule:evenodd;stroke-width:6.165;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+           x="22.605574"
+           y="92.162132"
+           id="text4"><tspan
+             id="tspan4"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;font-family:Baskerville;-inkscape-font-specification:'Baskerville, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:6.165"
+             x="22.605574"
+             y="92.162132">I</tspan></text>
+      </g>
+      <g
+         id="g6">
+        <circle
+           style="opacity:0.293525;fill:#646924;fill-opacity:1;fill-rule:evenodd;stroke-width:2.28356;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+           id="circle1"
+           cx="24.8566"
+           cy="87.957741"
+           r="10" />
+        <text
+           xml:space="preserve"
+           style="font-size:25.4px;line-height:0.7;font-family:Baskerville;-inkscape-font-specification:'Baskerville, Normal';letter-spacing:0.00264583px;word-spacing:0px;opacity:0.293525;fill:#646924;fill-opacity:1;fill-rule:evenodd;stroke-width:6.165;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+           x="22.605574"
+           y="92.162132"
+           id="text3"><tspan
+             id="tspan3"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;font-family:Baskerville;-inkscape-font-specification:'Baskerville, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:6.165"
+             x="22.605574"
+             y="92.162132">I</tspan></text>
+      </g>
+      <g
+         id="g11"
+         transform="translate(33.010287,10)">
+        <circle
+           style="opacity:0.293525;fill:#642bb9;fill-opacity:1;fill-rule:evenodd;stroke-width:2.28356;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+           id="circle10"
+           cx="60.688278"
+           cy="87.957741"
+           r="10" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;line-height:0.7;font-family:Baskerville;-inkscape-font-specification:'Baskerville, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.00264583px;word-spacing:0px;opacity:0.293525;fill:#646924;fill-opacity:1;fill-rule:evenodd;stroke-width:6.165;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+           x="57.494675"
+           y="92.162132"
+           id="text10"><tspan
+             id="tspan25"
+             x="57.494675"
+             y="92.162132">0</tspan></text>
+      </g>
+      <g
+         id="g9"
+         transform="translate(0,26.803226)">
+        <circle
+           style="opacity:0.293525;fill:#642b24;fill-opacity:1;fill-rule:evenodd;stroke-width:2.28356;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+           id="circle8"
+           cx="60.688278"
+           cy="87.957741"
+           r="10" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;line-height:0.7;font-family:Baskerville;-inkscape-font-specification:'Baskerville, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.00264583px;word-spacing:0px;opacity:0.293525;fill:#646924;fill-opacity:1;fill-rule:evenodd;stroke-width:6.165;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+           x="55.60952"
+           y="92.162132"
+           id="text8"><tspan
+             id="tspan8"
+             x="55.60952"
+             y="92.162132">H</tspan></text>
+      </g>
+      <g
+         id="g8">
+        <circle
+           style="opacity:0.293525;fill:#642b24;fill-opacity:1;fill-rule:evenodd;stroke-width:2.28356;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+           id="circle4"
+           cx="60.688278"
+           cy="87.957741"
+           r="10" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;line-height:0.7;font-family:Baskerville;-inkscape-font-specification:'Baskerville, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.00264583px;word-spacing:0px;opacity:0.293525;fill:#646924;fill-opacity:1;fill-rule:evenodd;stroke-width:6.165;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+           x="55.60952"
+           y="92.162132"
+           id="text6"><tspan
+             id="tspan6"
+             x="55.60952"
+             y="92.162132">H</tspan></text>
+      </g>
+      <path
+         style="opacity:0.293525;fill:#220724;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DartArrow);paint-order:markers stroke fill"
+         d="M 34.856599,87.957741 H 50.688276"
+         id="path25" />
+      <path
+         style="opacity:0.293525;fill:#220724;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker27);paint-order:markers stroke fill"
+         d="M 34.856599,114.76097 H 50.688276"
+         id="path26" />
+      <path
+         style="opacity:0.293525;fill:#220724;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+         d="M 34.856599,87.957741 50.688276,114.76097"
+         id="path28" />
+      <path
+         style="opacity:0.293525;fill:#220724;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+         d="m 34.856599,114.76097 7.915839,-13.40161 7.915838,-13.401619"
+         id="path29" />
+      <path
+         style="opacity:0.293525;fill:#220724;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+         d="m 70.688278,87.957741 13.010285,9.999998"
+         id="path30" />
+      <path
+         style="opacity:0.293525;fill:#220724;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker32);paint-order:markers stroke fill"
+         d="M 70.688278,114.76097 83.698563,97.957739"
+         id="path31" />
+    </g>
+    <g
+       id="g37"
+       transform="translate(-8.4666671,5.0000005)">
+      <g
+         id="g32"
+         transform="matrix(0.35,0,0,0.35,119.02636,45.672531)">
+        <circle
+           style="opacity:0.293525;fill:#646924;fill-opacity:1;fill-rule:evenodd;stroke-width:2.28356;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+           id="circle32"
+           cx="24.8566"
+           cy="87.957741"
+           r="10" />
+        <text
+           xml:space="preserve"
+           style="font-size:25.4px;line-height:0.7;font-family:Baskerville;-inkscape-font-specification:'Baskerville, Normal';letter-spacing:0.00264583px;word-spacing:0px;opacity:0.293525;fill:#646924;fill-opacity:1;fill-rule:evenodd;stroke-width:6.165;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+           x="22.605574"
+           y="92.162132"
+           id="text32"><tspan
+             id="tspan32"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;font-family:Baskerville;-inkscape-font-specification:'Baskerville, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:6.165"
+             x="22.605574"
+             y="92.162132">I</tspan></text>
+      </g>
+      <g
+         id="g33"
+         transform="matrix(0.35,0,0,0.35,106.48527,53.995448)">
+        <circle
+           style="opacity:0.293525;fill:#642b24;fill-opacity:1;fill-rule:evenodd;stroke-width:2.28356;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+           id="circle33"
+           cx="60.688278"
+           cy="87.957741"
+           r="10" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;line-height:0.7;font-family:Baskerville;-inkscape-font-specification:'Baskerville, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.00264583px;word-spacing:0px;opacity:0.293525;fill:#646924;fill-opacity:1;fill-rule:evenodd;stroke-width:6.165;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+           x="55.60952"
+           y="92.162132"
+           id="text33"><tspan
+             id="tspan33"
+             x="55.60952"
+             y="92.162132">H</tspan></text>
+      </g>
+      <g
+         id="g34"
+         transform="matrix(0.35,0,0,0.35,106.48527,62.318364)">
+        <circle
+           style="opacity:0.293525;fill:#642bb9;fill-opacity:1;fill-rule:evenodd;stroke-width:2.28356;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+           id="circle34"
+           cx="60.688278"
+           cy="87.957741"
+           r="10" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;line-height:0.7;font-family:Baskerville;-inkscape-font-specification:'Baskerville, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.00264583px;word-spacing:0px;opacity:0.293525;fill:#646924;fill-opacity:1;fill-rule:evenodd;stroke-width:6.165;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+           x="57.494675"
+           y="92.162132"
+           id="text34"><tspan
+             id="tspan34"
+             x="57.494675"
+             y="92.162132">0</tspan></text>
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:0.7;font-family:Baskerville;-inkscape-font-specification:'Baskerville, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.00264583px;word-spacing:0px;opacity:0.293525;fill:#642bb9;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.105833;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:0.478431;paint-order:markers stroke fill"
+         x="135.56137"
+         y="77.191544"
+         id="text35"><tspan
+           id="tspan35"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;font-family:Baskerville;-inkscape-font-specification:'Baskerville, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:#000000;stroke-width:0.105833;stroke-dasharray:none;stroke-opacity:0.478431"
+           x="135.56137"
+           y="77.191544">Input</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:0.7;font-family:Baskerville;-inkscape-font-specification:'Baskerville, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.00264583px;word-spacing:0px;opacity:0.293525;fill:#642bb9;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.105833;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:0.478431;paint-order:markers stroke fill"
+         x="135.54242"
+         y="85.936485"
+         id="text36"><tspan
+           id="tspan36"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;font-family:Baskerville;-inkscape-font-specification:'Baskerville, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:#000000;stroke-width:0.105833;stroke-dasharray:none;stroke-opacity:0.478431"
+           x="135.54242"
+           y="85.936485">Hidden</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;line-height:0.7;font-family:Baskerville;-inkscape-font-specification:'Baskerville, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.00264583px;word-spacing:0px;opacity:0.293525;fill:#642bb9;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.105833;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:0.478431;paint-order:markers stroke fill"
+         x="135.47179"
+         y="93.85891"
+         id="text37"><tspan
+           id="tspan37"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;font-family:Baskerville;-inkscape-font-specification:'Baskerville, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:#000000;stroke-width:0.105833;stroke-dasharray:none;stroke-opacity:0.478431"
+           x="135.47179"
+           y="93.85891">Output</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777px;line-height:0.7;font-family:Baskerville;-inkscape-font-specification:'Baskerville, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.00264583px;word-spacing:0px;opacity:0.293525;fill:#28124c;fill-opacity:0.501961;fill-rule:evenodd;stroke:#000000;stroke-width:0.105833;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:0.478431;paint-order:markers stroke fill"
+       x="97.153954"
+       y="123.86572"
+       id="text38"><tspan
+         id="tspan38"
+         x="97.153954"
+         y="123.86572">Feed forward Network (FFN)</tspan></text>
+  </g>
+</svg>

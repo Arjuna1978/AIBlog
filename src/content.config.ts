@@ -32,7 +32,7 @@ const homepageCollection = defineCollection({
         .optional(),
     }),
 
-    
+
     cta: z.object({
       title: z.string(),
       description: z.string(),
@@ -72,11 +72,20 @@ const blogCollection = defineCollection({
     meta_title: z.string().optional(),
     description: z.string().optional(),
     date: z.date().optional(),
-    image: z.string().optional(),
+    icon: z.string().optional(),
     author: z.string().optional(),
     categories: z.array(z.string()).default(["others"]),
     draft: z.boolean().optional(),
     featured: z.boolean().optional(),
+    image_list: z
+        .array(
+          z.object({
+            image: z.string(),
+            caption: z.string(),
+            link: z.string().default(""),
+          }),
+        )
+        .optional(),
   }),
 });
 

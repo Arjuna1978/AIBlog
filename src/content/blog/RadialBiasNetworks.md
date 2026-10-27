@@ -1,7 +1,7 @@
 ---
 title: RBNs
 subtitle: Radial Bias Networks (RBN)
-image: "src/images/blogs/RBN/RBN.png"
+icon: "src/images/blogs/RBN/RBN.png"
 author: Arjuna Vijayanayagam
 date: 2005-01-03T05:00:00Z
 categories: ["Theory","Foundations","History"]

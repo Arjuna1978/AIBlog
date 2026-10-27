@@ -1,7 +1,7 @@
 ---
 title: Example SKFL projects
 subtitle: Use these to learn how to SKFL your next system
-image: "/src/images/library/post1-Ollama-setup/Ollama.png"
+icon: "/src/images/library/post1-Ollama-setup/Ollama.png"
 author: Alice Johnson
 date: 2025-01-03T05:00:00Z
 categories: ["Setup", "LLM"]

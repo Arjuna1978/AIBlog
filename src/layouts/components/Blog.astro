@@ -21,7 +21,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/**/*.{j
 // 2. Map through posts and resolve image metadata asynchronously
 const formattedPosts = await Promise.all(
   posts.map(async (item) => {
-    const rawImage = item.data.image;
+    const rawImage = item.data.icon;
     let imageMetadata: ImageMetadata | undefined;
 
     if (rawImage && typeof rawImage === "string" && rawImage.trim() !== "") {

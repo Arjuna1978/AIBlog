@@ -1,7 +1,7 @@
 ---
 title: What is a Neural Network?
 subtitle: What exactly are Neural Networks? Undertanding this concept is foundational to understanding AI
-image: "/images/posts/post-4.png"
+icon: "/images/posts/post-4.png"
 author: Abdullah Al Shifat
 date: 2022-04-05T05:00:00Z
 categories: ["development"]

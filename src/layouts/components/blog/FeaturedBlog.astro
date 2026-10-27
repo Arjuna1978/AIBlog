@@ -7,61 +7,107 @@ import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
 const { summary_length } = config.settings;
 const rootURL = config.site.root;
+
+
 type Props = {
   posts: CollectionEntry<"blog">[];
 };
-const { posts } = Astro.props;
----
 
+const { posts } = Astro.props;
+
+// 1. Glob all images from /src/images/
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/**/*.{jpeg,jpg,png,gif,svg,webp}');
+
+// 2. Map through posts and resolve image metadata asynchronously
+const formattedPosts = await Promise.all(
+  posts.map(async (item) => {
+    const rawImage = item.data.icon;
+    let imageMetadata: ImageMetadata | undefined;
+
+    if (rawImage && typeof rawImage === "string" && rawImage.trim() !== "") {
+      let cleaned = rawImage.replace(/\/+/g, '/'); // Fix double slashes
+
+      let imageKey: string | undefined;
+      if (cleaned.includes('/src/images/')) {
+        imageKey = '/src/' + cleaned.split('/src/')[1];
+      } else if (cleaned.startsWith('../../images/')) {
+        imageKey = cleaned.replace('../../images/', '/src/images/');
+      } else if (cleaned.startsWith('/src/')) {
+        imageKey = cleaned;
+      } else if (cleaned.startsWith('src/')) {
+        imageKey = '/' + cleaned;
+      } else if (cleaned.startsWith('/')) {
+        imageKey = '/src' + cleaned;
+      } else {
+        imageKey = '/src/' + cleaned;
+      }
+
+      if (imageKey && imageKey in images) {
+        const imageModule = await images[imageKey]();
+        imageMetadata = imageModule.default;
+      }
+    }
+
+    return {
+      ...item,
+      imageMetadata,
+    };
+  })
+);
+---
 <h2 class="h4 mb-4">Featured Posts</h2>
-<div class="featured-posts row">
+<div class="row">
   {
-    posts.map((post) => (
+    formattedPosts.map((item) => (
       <div class="mb-8 md:col-6">
         <div class="card">
-          <Image
-            class="card-img"
-            width={235}
-            height={304}
-            src={post.data.image!}
-            alt={post.data.title}
-          />
+          {item.imageMetadata && (
+            <Image
+              class="card-img aspect-video object-cover"
+              width={235}
+              height={304}
+              src={item.imageMetadata}
+              alt={item.data.title}
+            />
+          )}
           <div class="card-content">
             <div class="card-tags space-x-1">
-              {post.data.categories.map((category) => (
+              {item.data.categories?.map((category) => (
                 <a class="tag" href={rootURL+`/categories/${slugify(category)}`}>
                   {humanize(category)}
                 </a>
               ))}
             </div>
             <h3 class="h4 card-title">
-              <a href={rootURL+`/blog/${post.id}`}>{post.data.title}</a>
+              <a href={rootURL+`/blog/${item.id}`}>{item.data.title}</a>
             </h3>
-            {post.body && (
+
+            {item.body && (
               <p class="mb-4 text-text">
-                {plainify(post.body?.slice(0, Number(summary_length)))}...
+                {plainify(item.body?.slice(0, Number(summary_length)))}...
               </p>
             )}
 
             <div class="card-footer mt-6 flex space-x-4">
-              <span class="inline-flex items-center text-xs text-[#666]">
-                <svg
-                  class="mr-1.5"
-                  width="14"
-                  height="16"
-                  viewBox="0 0 14 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M12.5 2H11V0.375C11 0.16875 10.8313 0 10.625 0H9.375C9.16875 0 9 0.16875 9 0.375V2H5V0.375C5 0.16875 4.83125 0 4.625 0H3.375C3.16875 0 3 0.16875 3 0.375V2H1.5C0.671875 2 0 2.67188 0 3.5V14.5C0 15.3281 0.671875 16 1.5 16H12.5C13.3281 16 14 15.3281 14 14.5V3.5C14 2.67188 13.3281 2 12.5 2ZM12.3125 14.5H1.6875C1.58438 14.5 1.5 14.4156 1.5 14.3125V5H12.5V14.3125C12.5 14.4156 12.4156 14.5 12.3125 14.5Z"
-                    fill="#939393"
-                  />
-                </svg>
-                {dateFormat(post.data.date!)}
-              </span>
-
-              {post.body && (
+              {item.data.date && (
+                <span class="inline-flex items-center text-xs text-[#666]">
+                  <svg
+                    class="mr-1.5"
+                    width="14"
+                    height="16"
+                    viewBox="0 0 14 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12.5 2H11V0.375C11 0.16875 10.8313 0 10.625 0H9.375C9.16875 0 9 0.16875 9 0.375V2H5V0.375C5 0.16875 4.83125 0 4.625 0H3.375C3.16875 0 3 0.16875 3 0.375V2H1.5C0.671875 2 0 2.67188 0 3.5V14.5C0 15.3281 0.671875 16 1.5 16H12.5C13.3281 16 14 15.3281 14 14.5V3.5C14 2.67188 13.3281 2 12.5 2ZM12.3125 14.5H1.6875C1.58438 14.5 1.5 14.4156 1.5 14.3125V5H12.5V14.3125C12.5 14.4156 12.4156 14.5 12.3125 14.5Z"
+                      fill="#939393"
+                    />
+                  </svg>
+                  {dateFormat(item.data.date)}
+                </span>
+              )}
+              {item.body && (
                 <span class="inline-flex items-center text-xs text-[#666]">
                   <svg
                     class="mr-1.5"
@@ -76,7 +122,7 @@ const { posts } = Astro.props;
                       fill="#939393"
                     />
                   </svg>
-                  {readingTime(post.body)}
+                  {readingTime(item.body)}
                 </span>
               )}
             </div>

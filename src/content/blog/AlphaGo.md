@@ -1,12 +1,16 @@
 ---
 title: Alpha Go
 subtitle: Google AI wins at GO and you just lost your job!
-image: "/images/blogs/AlphaGo/titlePage.jpeg"
-author: Abdullah Al Shifat
+icon: "src/images/blogs/AlphaGo/GoBot.jpeg"
+author: Arjuna Vijayanayagam
 date: 2017-05-29T05:00:00Z
 categories: ["Thoughts", "History"]
 featured: false
 draft: false
+image_list:
+    - image: "src/images/blogs/AlphaGo/Go.jpeg"
+      caption: Go
+      link: "/categories/theory"
 ---
 
 Oringinally published on LinkedIn here:
