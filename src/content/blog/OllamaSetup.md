@@ -19,7 +19,7 @@ To use SKFL's code generation capability Ollama must run locally on your machine
 
 ## What is Ollama?
 
-Ollama is a runtime for working with large language models, supporting both cloud-hosted models and locally-run models. For our alpha release, we use Ollama's cloud model (qwen3-coder:480b-cloud) to power generation. As such, utilising our AI features requires installing Ollama, creating an Ollama account, and running the Ollama server locally.
+Ollama is a runtime for working with large language models, supporting both cloud-hosted models and locally-run models. For our alpha release, we use Ollama's cloud model (qwen3-coder:480b-cloud) to power generation. As such, utilising our AI features requires  installing Ollama, creating an Ollama account, and running the Ollama server locally.
 
 Ollama is free to use. There are usage limits on cloud-hosted models but these limits are generous and are unlikely to be reached during normal alpha usage.
 
