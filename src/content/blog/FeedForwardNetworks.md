@@ -33,5 +33,8 @@ A feed-forward neural network is an artificial neural network in which the nodes
 TBC
 
 ## Anatomy of FFNs
+A feedforward neural network is an artificial neural network in which information flows in a single direction. Inputs are multiplied by weights to obtain outputs (inputs-to-output). 
 
-TBC
+It contrasts with a recurrent neural network, in which loops allow information from later processing stages to feed back to earlier stages. Feedforward multiplication is essential for backpropagation, because feedback, where the outputs feed back to the very same inputs and modify them, forms an infinite loop which is not possible to differentiate through backpropagation.
+
+
