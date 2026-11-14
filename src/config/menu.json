@@ -11,6 +11,14 @@
     {
       "name": "Blog",
       "url": "/AIBlog/blog"
+    },
+    {
+      "name":"Button Gallary",
+      "url":"/AIBlog/buttonPage"
+    },
+        {
+      "name":"Button Gallary",
+      "url":"/AIBlog/photoGallaryPage"
     }
   ],
 

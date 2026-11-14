@@ -1,26 +1,29 @@
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
+import config from "@/config/LiquidAnimation.json";
+import systenStyles from "@/config/theme.json"
+
 
 export default function LiquidEther({
-  mouseForce = 20,
-  cursorSize = 100,
-  isViscous = false,
-  viscous = 30,
-  iterationsViscous = 32,
-  iterationsPoisson = 32,
-  dt = 0.014,
-  BFECC = true, // Ensure this is explicitly listed here
-  resolution = 0.3,
-  isBounce = false,
-  colors = [ "rgba(11, 25, 3, 0.71)","rgba(90, 155, 98, 0.47)", "#080b09e4"],
-  style = {},
-  className = "",
-  autoDemo = true,
-  autoSpeed = 0.5,
-  autoIntensity = 2.2,
-  takeoverDuration = 0.25,
-  autoResumeDelay = 1000,
-  autoRampDuration = 0.6,
+  mouseForce = config.settings.mouseForce,
+  cursorSize = config.settings.cursorSize,
+  isViscous = config.settings.isViscous,
+  viscous = config.settings.viscous,
+  iterationsViscous = config.settings.iterationsViscous,
+  iterationsPoisson = config.settings.iterationsPoisson,
+  dt = config.settings.dt,
+  BFECC = config.settings.BFECC, // Ensure this is explicitly listed here
+  resolution = config.settings.resolution,
+  isBounce = config.settings.isBounce,
+  colors = [ systenStyles.colors.primary,systenStyles.colors.secondary,systenStyles.colors.dark ],
+  style = config.settings.style,
+  className = config.settings.className,
+  autoDemo = config.settings.autoDemo,
+  autoSpeed = config.settings.autoSpeed,
+  autoIntensity = config.settings.autoIntensity,
+  takeoverDuration = config.settings.takeoverDuration,
+  autoResumeDelay = config.settings.autoResumeDelay,
+  autoRampDuration = config.settings.autoRampDuration,
 }) {
   const mountRef = useRef(null);
   const webglRef = useRef(null);
@@ -42,7 +45,7 @@ export default function LiquidEther({
           arr = stops;
         }
       } else {
-        arr = ["#ffffff", "#ffffff"];
+        arr = [systenStyles.colors.light, systenStyles.colors.light];
       }
       const w = arr.length;
       const data = new Uint8Array(w * 4);

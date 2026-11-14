@@ -21,7 +21,7 @@ This file does not accept any external props and handles all data loading intern
 */
 
 import Base from "@/layouts/components/common/Base.astro";
-import Banner from "@/layouts/components/common/Banner.astro";
+import Banner from "@/layouts/components/common/LiquidEther_Banner.astro";
 import KeyFeatures from "@/layouts/components/home/CardTable.astro";
 import Cta from "@/layouts/components/common/Cta.astro";
 import TwistyButton  from "@/components/common/TwistyButton.astro";
@@ -32,13 +32,12 @@ const homepage = (await getEntry(
   "homepage",
   "-index"
 )) as CollectionEntry<"homepage">;
-const { banner, key_features, cta } = homepage.data;
+const { banner, table_with_links, cta } = homepage.data;
 ---
 
 <Base>
   <Banner banner={banner} />
-  <KeyFeatures key_features={key_features} />
+  <KeyFeatures key_features={table_with_links} />
   <Cta cta={cta} />
-  <TwistyButton link="blog" label="I love my Wifey" />
 </Base>
 

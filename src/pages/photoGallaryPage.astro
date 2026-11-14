@@ -1,0 +1,78 @@
+---
+/**
+@file index.astro
+@component
+
+Index.astro serves as the main layout for the site's homepage.
+
+This component is an extension of base.astro.
+base.astro handles all the metadata and global stuff like managing the header and footer.
+
+It is responsible for fetching structured data from the 'homepage' content
+collection. This data is stored in ./src/content/homepage/-index.md
+
+The homepage data is passed specific components:
+banner, features, service, testimonial.
+
+Page components are in ./src/layouts/components/home.
+
+This file does not accept any external props and handles all data loading internally.
+@returns {HTML} The complete, rendered homepage HTML
+*/
+
+import Base from "@/layouts/components/common/Base.astro";
+import TwistyButton  from "@/components/common/TwistyButton.astro";
+import CircularCarousel from '@/layouts/scripts/CircularCarousel.tsx';
+
+import type { CollectionEntry } from "astro:content";
+import { getEntry } from "astro:content";
+
+const homepage = (await getEntry(
+  "buttonPage",
+  "-index"
+)) as CollectionEntry<"buttonPage">;
+const { banner, table_with_links, cta } = homepage.data;
+
+const items = [
+  { src: '/AIBlog/images/post-1.png', alt: 'Mist drifting through a valley', title: 'Valley', subtitle: 'Landscape' },
+  { src: '/AIBlog/images/post-2.png', alt: 'A studio portrait', title: 'Portrait', subtitle: 'Studio' },
+  { src: '/AIBlog/images/post-3.png', alt: 'Glass towers from street level', title: 'Towers', subtitle: 'Architecture' }
+];
+---
+
+<Base>
+ <section class="section">
+    <div class="container">
+        <div style={{ width: '100%', height: '560px', position: 'relative' }}>
+  <CircularCarousel
+    items={items}
+    preset="cylinder"
+    intro="rise"
+    cardWidth={220}
+    aspectRatio={1}
+    speed={14}
+    captions={false}
+    gap={25}
+    tilt={-5}
+    curve={0.3}
+    perspective={2500}
+    autoplay="drift"
+    interval={3}
+    direction="left"
+    momentum={0.6}
+    snap
+    pauseOnHover
+    focusOnClick
+    draggable
+    parallax={0.3}
+    stretch={0.5}
+    fadeColor="#000000"
+    depthFade={0.11}
+    innerShade={0.6}
+    cornerRadius={12}
+/>
+</div>
+    </div>
+  </section>
+</Base>
+

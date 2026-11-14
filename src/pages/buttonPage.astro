@@ -1,0 +1,45 @@
+---
+/**
+@file index.astro
+@component
+
+Index.astro serves as the main layout for the site's homepage.
+
+This component is an extension of base.astro.
+base.astro handles all the metadata and global stuff like managing the header and footer.
+
+It is responsible for fetching structured data from the 'homepage' content
+collection. This data is stored in ./src/content/homepage/-index.md
+
+The homepage data is passed specific components:
+banner, features, service, testimonial.
+
+Page components are in ./src/layouts/components/home.
+
+This file does not accept any external props and handles all data loading internally.
+@returns {HTML} The complete, rendered homepage HTML
+*/
+
+import Base from "@/layouts/components/common/Base.astro";
+import TwistyButton  from "@/components/common/TwistyButton.astro";
+import type { CollectionEntry } from "astro:content";
+import { getEntry } from "astro:content";
+
+const homepage = (await getEntry(
+  "buttonPage",
+  "-index"
+)) as CollectionEntry<"buttonPage">;
+const { banner, table_with_links, cta } = homepage.data;
+---
+
+<Base>
+ <section class="section">
+    <div class="container">
+        <div class="text-center">
+         This is a twisty button
+          <TwistyButton link="blog" label="I love my Wifey" />
+      </div>
+    </div>
+  </section>
+</Base>
+

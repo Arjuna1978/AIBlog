@@ -1,5 +1,6 @@
 {
-  "mouseForce" : 20,
+  "settings": {
+  "mouseForce" : 15,
   "cursorSize" : 100,
   "isViscous" : false,
   "viscous" : 30,
@@ -9,7 +10,6 @@
   "BFECC": true,
   "resolution" : 0.3,
   "isBounce" : false,
-  "colors" : [ "#5a9b62ff",  "#1a3c07ff", "#B19EEF"],
   "style" : {},
   "className" : "",
   "autoDemo" : true,
@@ -18,4 +18,5 @@
   "takeoverDuration" : 0.25,
   "autoResumeDelay" : 1000,
   "autoRampDuration" : 0.6
+}
 }

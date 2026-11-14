@@ -1,11 +1,11 @@
 ---
 banner:
-  title: "Another AI Blog for the curious"
-  content: "I started this page for my self initially. I needed a place to keep my idethoughts and learnings."
-  image: "/src/images/homepage/banner/banner-img.png"
+  title: "Default Page"
+  content: "This is the default page"
+  image: "/src/images/homepage/banner/banner-img.jpg"
 
 #keyfeatures
-key_features:
+table_with_links:
   title: "Article Catagories"
   description: .
   feature_list:

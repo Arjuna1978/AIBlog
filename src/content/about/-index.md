@@ -1,6 +1,6 @@
 ---
 title: "About"
-page_title: "A little bit more about me:"
+page_title: "A little bit about this page:"
 meta_title: ""
 description: "I trained as an Engineer and have moved into Product Management. I continue to code recreationally and am really interested in the use of AI on local and resource limited platforms."
 image: ""

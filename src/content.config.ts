@@ -17,7 +17,47 @@ const homepageCollection = defineCollection({
         })
         .optional(),
     }),
-    key_features: z.object({
+    table_with_links: z.object({
+      title: z.string(),
+      description: z.string(),
+      feature_list: z
+        .array(
+          z.object({
+            icon: z.string(),
+            title: z.string(),
+            content: z.string(),
+            link: z.string().default(""),
+          }),
+        )
+        .optional(),
+    }),
+
+
+    cta: z.object({
+      title: z.string(),
+      description: z.string(),
+      buttonLabel: z.string(),
+      buttonLink: z.string(),
+    }),
+  }),
+});
+
+const buttonPageCollection = defineCollection({
+  loader: glob({ pattern: "**/-*.{md,mdx}", base: "src/content/buttonPage" }),
+  schema: z.object({
+    banner: z.object({
+      title: z.string(),
+      content: z.string().optional(),
+      image: z.string(),
+      button: z
+        .object({
+          label: z.string(),
+          link: z.string(),
+          enable: z.boolean().default(true),
+        })
+        .optional(),
+    }),
+    table_with_links: z.object({
       title: z.string(),
       description: z.string(),
       feature_list: z
@@ -109,4 +149,5 @@ export const collections = {
   about: aboutCollection,
   blog: blogCollection,
   pages: pagesCollection,
+  buttonPage: buttonPageCollection
 };
