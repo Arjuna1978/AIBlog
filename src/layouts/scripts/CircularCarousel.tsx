@@ -6,6 +6,7 @@ export interface CircularCarouselItem {
   src: string;
   alt?: string;
   title?: string;
+  type?: 'image' | 'video';
   subtitle?: string;
 }
 
@@ -1015,6 +1016,7 @@ const CircularCarousel = ({
         : { left: -offset, top: 0, width: cardW, height: cardH };
     const flip = axis === 'x' ? ' rotateX(180deg)' : ' rotateY(180deg)';
     const gone = leaving?.items[index];
+    const isVideo = item.type === 'video' || /\.(mp4|webm|ogv|mov)$/i.test(item.src);
     return (
       <div
         key={`${back ? 'b' : 'f'}${tile.index}`}
@@ -1026,7 +1028,20 @@ const CircularCarousel = ({
           className="absolute left-0 top-0 w-full overflow-hidden"
           style={{ height: axis === 'x' ? size : cardH, borderRadius: frameRadius }}
         >
-          <img
+          {isVideo ? (
+            <video
+              className="pointer-events-none absolute block max-w-none select-none object-cover [-webkit-user-drag:none]"
+              src={item.src}
+              title ={item.src}
+              autoPlay
+              muted 
+              loop
+              playsInline
+              preload="auto"
+              style={photoStyle}
+            />
+          ) : (
+             <img
             className="pointer-events-none absolute block max-w-none select-none object-cover [-webkit-user-drag:none]"
             src={item.src}
             alt=""
@@ -1034,8 +1049,10 @@ const CircularCarousel = ({
             decoding="async"
             style={photoStyle}
           />
+          )}
+
           {gone && (
-            <img
+             <img
               key={`leaving-${leaving.id}`}
               className="pointer-events-none absolute block max-w-none select-none object-cover [-webkit-user-drag:none] animate-[circular-carousel-leave_700ms_cubic-bezier(0.33,1,0.68,1)_both]"
               src={gone.src}
